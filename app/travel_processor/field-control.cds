@@ -88,7 +88,8 @@ annotate TravelService.Booking with @(
 
 
 annotate TravelService.BookingSupplement {
-  Price         @Common.FieldControl  : to_Travel.TravelStatus.fieldControl;
+  Price         @Common.FieldControl  : #Mandatory;
+  CurrencyCode  @Common.FieldControl  : to_Travel.TravelStatus.fieldControl;
   to_Supplement @Common.FieldControl  : to_Travel.TravelStatus.fieldControl;
   to_Booking    @Common.FieldControl  : to_Travel.TravelStatus.fieldControl;
   to_Travel     @Common.FieldControl  : to_Travel.TravelStatus.fieldControl;
